@@ -1,0 +1,11 @@
+---
+- name: install http
+  yum: pkg=httpie state=latest
+- name: install haproxy
+  yum: pkg=haproxy state=latest
+- name: enable HAProxy
+  service: name=haproxy enabled=yes
+- name: configure haproxy
+  template: src=./haproxy.cfg.j2 dest=/etc/haproxy/haproxy.cfg
+- name: start HAProxy
+  service: name=haproxy state=started

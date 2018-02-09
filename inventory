@@ -1,0 +1,16 @@
+[frontends]
+## These are the frontends
+frontend1.f438.internal ansible_ssh_host=frontend1.f438.example.opentlc.com
+
+[apps]
+## These are the apps
+app1.f438.internal ansible_ssh_host=app1.f438.example.opentlc.com
+app2.f438.internal ansible_ssh_host=app2.f438.example.opentlc.com
+
+[appdbs]
+## These are the appdbs
+appdb1.f438.internal ansible_ssh_host=appdb1.f438.example.opentlc.com
+
+## These are the support
+[support]
+support1.f438.internal ansible_ssh_host=support1.f438.example.opentlc.com

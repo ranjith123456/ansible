@@ -1,0 +1,20 @@
+---
+- hosts: every
+  gather_facts: true
+  roles:
+  - name: conf
+
+- hosts: frontends
+  gather_facts: true
+  roles:
+  - name: haproxy
+
+- hosts: apps
+  gather_facts: true
+  roles:
+  - name: tomcat
+
+- hosts: appdbs
+  gather_facts: true
+  roles:
+  - name: postgres
